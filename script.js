@@ -21,6 +21,7 @@ let listArrays =[];
 
 // Drag Functionality
 let draggedItem;
+let dragging = false;
 let currentColumn;
 
 // Get Arrays from localStorage if available, set default values if not
@@ -111,10 +112,14 @@ updateSavedColumns();
 function updateItem(id, column) {
   const selectedArray = listArrays[column];
   const selectedColumnEl = columnList[column].children;
-  if (!selectedColumnEl[id].textContent) {
-    delete selectedArray[id];
+  if (!dragging) {
+    if (!selectedColumnEl[id].textContent) {
+      delete selectedArray[id];
+    } else {
+      selectedArray[id] = selectedColumnEl[id].textContent;
+    }
+    updateDOM();
   }
-  updateDOM();
 }
 
 //Add to column list, reset textbox
@@ -162,10 +167,16 @@ function rebuildArrays() {
   updateDOM();
 }
 
+//When Item enters column area
+function dragEnter(column) {
+  columnList[column].classList.add('over');
+  currentColumn = column;
+}
 
 //Item starts dragging
 function drag(e) {
 draggedItem = e.target;
+dragging = true;
 }
 
 //Allow Item to drop
@@ -173,22 +184,18 @@ function allowDrop(e) {
   e.preventDefault();
 }
 
-//When Item enters column area
-function dragEnter(column) {
-  columnList[column].classList.add('over');
-  currentColumn = column;
-}
-
 //Dropping Item in column
 function drop(e) {
   e.preventDefault();
+  const parent = columnList[currentColumn];
 //remove background color
   columnList.forEach((column) => {
       column.classList.remove('over');
   });
 //add item to column
-  const parent = columnList[currentColumn];
   parent.appendChild(draggedItem);
+// Dragging complete
+  dragging = false;
   rebuildArrays();
 }
 
