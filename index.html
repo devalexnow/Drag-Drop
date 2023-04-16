@@ -21,17 +21,17 @@
                     <ul class="drag-item-list" id="backlog-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(0)"></ul>
                 </div>
                 <!-- Add Button Group -->
-                <div class="add-btn-group">
+                <div class="add-btn-group" onclick="showInputBox(0)">
                     <div class="add-btn">
                         <span class="plus-sign">+</span>
                         <span>Dodaj</span>
                     </div>
-                    <div class="add-btn solid">
+                    <div class="add-btn solid" onclick="hideInputBox(0)">
                         <span>Zapisz</span>
                     </div>
-                    <div class="add-container">
-                        <div class="add-item"></div>
-                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item"></div>
                 </div>
             </li>
             <!-- Progress column -->
@@ -45,16 +45,16 @@
                 </div>
                 <!-- Add Button Group -->
                 <div class="add-btn-group">
-                    <div class="add-btn">
+                    <div class="add-btn" onclick="showInputBox(1)">
                         <span class="plus-sign">+</span>
                         <span>Dodaj</span>
                     </div>
-                    <div class="add-btn solid">
+                    <div class="add-btn solid" onclick="hideInputBox(1)">
                         <span>Zapisz</span>
                     </div>
-                    <div class="add-container">
-                        <div class="add-item"></div>
-                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item"></div>
                 </div>
             </li>
             <!-- Complete column -->
@@ -67,17 +67,17 @@
                     <ul class="drag-item-list" id="complete-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(2)"></ul>
                 </div>
                 <!-- Add Button Group -->
-                <div class="add-btn-group">
+                <div class="add-btn-group" onclick="showInputBox(2)">
                     <div class="add-btn">
                         <span class="plus-sign">+</span>
                         <span>Dodaj</span>
                     </div>
-                    <div class="add-btn solid">
+                    <div class="add-btn solid" onclick="hideInputBox(2)">
                         <span>Zapisz</span>
                     </div>
-                    <div class="add-container">
-                        <div class="add-item"></div>
-                    </div>
+                </div>    
+                <div class="add-container">
+                    <div class="add-item"></div>
                 </div>
             </li>
             <!-- On Hold Column -->
@@ -90,17 +90,17 @@
                     <ul class="drag-item-list" id="on-hold-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(3)"></ul>
                 </div>
                 <!-- Add Button Group -->
-                <div class="add-btn-group">
+                <div class="add-btn-group" onclick="showInputBox(3)">
                     <div class="add-btn">
                         <span class="plus-sign">+</span>
                         <span>Dodaj</span>
                     </div>
-                    <div class="add-btn solid">
+                    <div class="add-btn solid" onclick="hideInputBox(3)">
                         <span>Zapisz</span>
                     </div>
-                    <div class="add-container">
-                        <div class="add-item"></div>
-                    </div>
+                </div>    
+                <div class="add-container">
+                    <div class="add-item"></div>
                 </div>
             </li>
         </ul>

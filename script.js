@@ -98,10 +98,23 @@ updatedOnLoad = true;
 updateSavedColumns();
 }
 
+//Show add item input box
+function showInputBox(column) {
+  addBtns[column].style.visibility = 'hidden';
+  saveItemBtns[column].style.display = 'flex';
+  addItemContainers[column].style.display = 'flex';
+}
+
+//Hide Item input box
+function hideInputBox(column) {
+  addBtns[column].style.visibility = 'visible';
+  saveItemBtns[column].style.display = 'none';
+  addItemContainers[column].style.display = 'none';
+
+}
+
 //Allow arrays to reflect Drag & Drop Items
 function rebuildArrays() {
-  console.log(backlogList.children);
-  console.log(progressList.children);
   backlogListArray = [];
   for (let i = 0; i < backlogList.children.length; i++) {
     backlogListArray.push(backlogList.children[i].textContent);
@@ -125,7 +138,6 @@ function rebuildArrays() {
 //Item starts dragging
 function drag(e) {
 draggedItem = e.target;
-console.log('draggedItem:', draggedItem);
 }
 
 //Allow Item to drop
