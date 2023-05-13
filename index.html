@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="main-title">Tablice Kanban</h1>
+    <h1 class="main-title">Kanban Board</h1>
     <div class="drag-container">
         <ul class="drag-list">
             <!-- Backlog column -->
             <li class="drag-column backlog-column">
                 <span class="header">
-                    <h1>Zadania</h1>
+                    <h1>Backlog</h1>
                 </span>
                 <!-- Backlog content -->
                 <div id="backlog-content" class="custom-scroll">
@@ -24,10 +24,10 @@
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(0)">
                         <span class="plus-sign">+</span>
-                        <span>Dodaj</span>
+                        <span>Add</span>
                     </div>
                     <div class="add-btn solid" onclick="hideInputBox(0)">
-                        <span>Zapisz</span>
+                        <span>Save Item</span>
                     </div>
                 </div>
                 <div class="add-container">
@@ -37,7 +37,7 @@
             <!-- Progress column -->
             <li class="drag-column progress-column">
                 <span class="header">
-                    <h1>W toku</h1>
+                    <h1>In Progress</h1>
                 </span>
                 <!-- Progress content -->
                 <div id="progress-content" class="custom-scroll">
@@ -47,10 +47,10 @@
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(1)">
                         <span class="plus-sign">+</span>
-                        <span>Dodaj</span>
+                        <span>Add</span>
                     </div>
                     <div class="add-btn solid" onclick="hideInputBox(1)">
-                        <span>Zapisz</span>
+                        <span>Save Item</span>
                     </div>
                 </div>
                 <div class="add-container">
@@ -60,7 +60,7 @@
             <!-- Complete column -->
             <li class="drag-column complete-column">
                 <span class="header">
-                    <h1>Wykonane</h1>
+                    <h1>Complete</h1>
                 </span>
                 <!-- Complete content -->
                 <div id="complete-content" class="custom-scroll">
@@ -70,10 +70,10 @@
                 <div class="add-btn-group" >
                     <div class="add-btn" onclick="showInputBox(2)">
                         <span class="plus-sign">+</span>
-                        <span>Dodaj</span>
+                        <span>Add</span>
                     </div>
                     <div class="add-btn solid" onclick="hideInputBox(2)">
-                        <span>Zapisz</span>
+                        <span>Save Item</span>
                     </div>
                 </div>    
                 <div class="add-container">
@@ -83,7 +83,7 @@
             <!-- On Hold Column -->
             <li class="drag-column on-hold-column">
                 <span class="header">
-                    <h1>Na później</h1>
+                    <h1>On Hold</h1>
                 </span>
                 <!-- On Hold content -->
                 <div id="on-hold-content" class="custom-scroll">
@@ -93,10 +93,10 @@
                 <div class="add-btn-group">
                     <div class="add-btn" onclick="showInputBox(3)">
                         <span class="plus-sign">+</span>
-                        <span>Dodaj</span>
+                        <span>Add</span>
                     </div>
                     <div class="add-btn solid" onclick="hideInputBox(3)">
-                        <span>Zapisz</span>
+                        <span>Save Item</span>
                     </div>
                 </div>    
                 <div class="add-container">
